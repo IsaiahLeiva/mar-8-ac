@@ -4,3 +4,8 @@ export const api = Axios.create({
   baseURL,
   timeout: 8000
 })
+
+
+export const nasaApi = Axios.create({
+  baseURL: 'https://apod.nasa.gov/apod/'
+})
