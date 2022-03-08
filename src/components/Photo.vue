@@ -1,9 +1,9 @@
 <template>
-  <div class="card" style="width: 18rem">
+  <div class="card" style="">
     <img src="..." class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ photo.title }}</h5>
-      <p class="card-text"></p>
+      <p class="explanation">{{ photo.explanation }}</p>
     </div>
   </div>
 </template>
