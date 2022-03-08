@@ -1,3 +1,4 @@
+const { AppState } = require("../AppState")
 
 
 const baseQuery = {
@@ -7,7 +8,12 @@ const baseQuery = {
 
 class PhotosService {
     async search(searchTerm) {
-
+        baseQuery.query = searchTerm
+        const res = await imageApi.get('', { params: baseQuery })
+        const images = res.data.results.map(i => new Image(m))
+        AppState.images = images
     }
 
 }
+
+export const photosService = new PhotosService()
