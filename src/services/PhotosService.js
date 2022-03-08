@@ -1,17 +1,19 @@
-const { AppState } = require("../AppState")
-
+import { logger } from "../utils/Logger"
+import { AppState } from "../AppState"
+import { nasaApi } from "./AxiosService"
 
 const baseQuery = {
     api_key: 'Ht8AYT943RPgfEOzPQdIgHBGW7xkzWg5LzCucrVI',
-    query: ''
+    date: ''
 }
 
 class PhotosService {
     async search(searchTerm) {
-        baseQuery.query = searchTerm
-        const res = await imageApi.get('', { params: baseQuery })
-        const images = res.data.results.map(i => new Image(m))
-        AppState.images = images
+        baseQuery.date = searchTerm
+        const res = await nasaApi.get('', { params: baseQuery })
+        const images = res.data
+        AppState.image = images
+        logger.log(res.data)
     }
 
 }
