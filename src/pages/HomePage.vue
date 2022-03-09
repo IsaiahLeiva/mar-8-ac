@@ -1,3 +1,4 @@
+//NOTE: Are we basically linking our other pages to this one below?
 <template>
   <SearchForm />
   <Photo :photo="photo" />
